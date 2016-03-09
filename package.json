@@ -1,0 +1,23 @@
+{
+  "name": "nodestart",
+  "version": "0.0.0",
+  "description": "a simple Node server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mgatland/nodestart.git"
+  },
+  "author": "Girl Code",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgatland/nodestart/issues"
+  },
+  "homepage": "https://github.com/mgatland/nodestart",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3"
+  }
+}

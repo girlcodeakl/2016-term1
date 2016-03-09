@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Idea Feed</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1 class="title">Idea Feed</h1>
+    <div class="idea-box">
+    </div>
+    <script>
+//Hello! This is the start of the JavaScript.
+
+var displayIdea = function(idea) {
+  var ideaElement = $('<h2>' + idea + '</h2>');
+  $(".idea-box").append(ideaElement);
+
+}
+
+var createFeed = function(data) {
+  data.forEach(displayIdea);
+}
+
+$.get("/ideas", createFeed);
+
+
+//This is the end of the JavaScript.
+    </script>
+  </body>
+</html>
