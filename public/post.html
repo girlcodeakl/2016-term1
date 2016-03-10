@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
+<head>
+  <meta charset='utf-8'>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <title>New Rawr</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
   <body>
+<<<<<<< HEAD
 <div class="outerBox">
       <form method="post" action="/ideas">
           <input type="text" name="idea" value="idea goes here">
@@ -16,5 +19,31 @@
           <input type="submit" value="Submit">
       </form>
     </div>
+=======
+      <form method="post" action="/ideas" class="Rawr">
+          <input type="text" name="idea" value="whats up in gondwanaland?" class="ideaInput">
+          <input type="submit" value="Rawr.">
+      </form>
+      <div class="note">
+      </div>
+      <h1>
+      </h1>
+      <h2></h2>
+        <div class="idea-box">
+            <a href="feed.html">Things about other people's life</a>
+            <a href="post.html">Post about your life</a>
+        </div>
+      <script>
+        var myCoolFunction = function (e) {
+          e.preventDefault();
+        var data = {};
+          data.idea = $(".ideaInput").val();
+          $.post( "/ideas" , data );
+          $(".note").text("Thanks! Your rawr has been heard, my lizard friend.");
+        }
+
+        $(".Rawr").on("submit", myCoolFunction);
+      </script>
+>>>>>>> origin/master
   </body>
 </html>
