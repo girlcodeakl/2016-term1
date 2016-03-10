@@ -13,7 +13,9 @@ app.use(bodyParser.json())
 
 //make an empty list of ideas
 var coolIdeas = [];
-coolIdeas.push("Two cats who solve crimes in Dunedin");
+var idea = {};
+idea.text = "Two cats who solve crimes in Dunedin";
+coolIdeas.push(idea);
 
 //let a client GET the list of ideas
 var sendIdeasList = function (request, response) {
@@ -24,7 +26,9 @@ app.get('/ideas', sendIdeasList);
 //let a client POST new ideas
 var saveNewIdea = function (request, response) {
   console.log(request.body.idea); //write it on the command prompt so we can see
-  coolIdeas.push(request.body.idea); //save it in our list
+  var idea = {};
+  idea.text = request.body.idea;
+  coolIdeas.push(idea); //save it in our list
   response.send("thanks for your idea. Press back to add another");
 }
 app.post('/ideas', saveNewIdea);
