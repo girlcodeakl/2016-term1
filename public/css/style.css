@@ -18,3 +18,11 @@ h2 {
   border-radius: 5px;
   text-align: center;
 }
+.nav-bar {
+  color: #AB4040;
+  margin: 50px;
+  padding-top: 30px;
+  border: 5px solid #488AC7;
+  border-radius: 7px;
+  text-align: center;
+}
