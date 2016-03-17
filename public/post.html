@@ -12,7 +12,7 @@
       <input type="text" name="idea" value="whats up in gondwanaland?" class="ideaInput">
       <br>
       <br>
-      <input type="text" name="Author" value="Whats your name?">
+      <input type="text" name="Author" value="Whats your name?" class="authorInput">
       <br>
       <br>
       <input type="submit" value="Rawr.">
@@ -31,6 +31,8 @@
     e.preventDefault();
     var data = {};
     data.idea = $(".ideaInput").val();
+    data.author = $(".authorInput").val();
+
     $.post( "/ideas" , data );
     $(".note").text("Thanks! Your rawr has been heard, my lizard friend.");
   }
