@@ -36,12 +36,24 @@ input[type=text] {
 .nameBox{
   width: 300px;
   height: 200px;
+}
 
 .nav-bar {
-  color: #AB4040;
-  margin: 50px;
-  padding-top: 30px;
-  border: 5px solid #488AC7;
+  font-family: 'Voltaire', sans-serif;
+  border: 5px solid #289976; <!--TEAL-->
   border-radius: 7px;
   text-align: center;
+}
+.nav-bar a {
+  display: inline-block;
+  width:30%;
+  padding:0;
+  margin:0;
+  text-decoration: none;
+  font-size:1.5em;
+  color: #67CC8E;     <!--GREEN-->
+}
+
+a:hover{
+  color: #B1FF91;   <!--PEPPERMINT-->
 }
