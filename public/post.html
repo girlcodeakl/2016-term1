@@ -16,7 +16,10 @@
       <input type="text" name="Author" value="Whats your name?" class="authorInput">
       <br>
       <br>
-      <input type="submit" value="Rawr.">
+<input type="text" name="Picture URL" value="Add dinosaur picture" class="urlInput">
+      <br>
+      <br>
+    <input type="submit" value="Rawr.">
     </form>
   </div>
   <div class="note">
@@ -33,6 +36,7 @@
     var data = {};
     data.idea = $(".ideaInput").val();
     data.author = $(".authorInput").val();
+    data.url = $(".urlInput").val();
 
     $.post( "/ideas" , data );
     $(".note").text("Thanks! Your rawr has been heard, my lizard friend.");
