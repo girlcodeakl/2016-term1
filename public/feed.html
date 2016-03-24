@@ -3,11 +3,12 @@
   <head>
     <meta charset='utf-8'>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script>
     <title>Idea Feed</title>
     <link href='https://fonts.googleapis.com/css?family=Voltaire' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>    
+  <body>
     <h1 class="title">Post about your life here!</h1>
     <div class="idea-box">
     </div>
@@ -20,7 +21,7 @@
 //Hello! This is the start of the JavaScript.
 
 var displayIdea = function(idea) {
-  var ideaElement = $('<h2>' + idea.text + '</h2>');
+  var ideaElement = $('<h2>' + idea.text + '<br>' + '<div class="time">' + $.format.prettyDate(idea.time) + '</div>' + '</h2>');
   $(".idea-box").append(ideaElement);
 
 }
