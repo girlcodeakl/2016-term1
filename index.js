@@ -29,6 +29,7 @@ var saveNewIdea = function (request, response) {
   console.log(request.body.author); //write it on the command prompt so we can see
   var idea = {};
   idea.text = request.body.idea;
+  idea.url = request.body.url;
   coolIdeas.push(idea); //save it in our list
   response.send("Thanks for your shit idea. Please don't do it again");
 }
