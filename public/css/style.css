@@ -1,9 +1,20 @@
 body {
-  color: black;
+  background-color: #FFE877; /*YELLOW*/
+}
+header{
+  margin: auto;
+  width:80%;
+}
+.logo{
+  background-image: image(Logo.png);
+  display: block;
+  margin: auto;
 }
 .idea-box {
-  background-color: #FFF0A5;
+  background-color: #B1FF91; /*PEPPERMINT*/
   padding: 20px;
+  width: 80%;
+  margin:auto;
 }
 h1 {
   text-align: center;;
@@ -14,34 +25,54 @@ h2 {
   color: #468966;
   margin: 10px;
   padding: 10px;
-  border: 2px solid #E849B1;
   border-radius: 5px;
   text-align: center;
 }
 .outerBox{
-  border: 10px solid #E849B1;
-  background-color: #F4BFFF;
-  padding: 50px;
+  border-radius: 10% 10% 0 0;
+  border: 5px solid #FF5600; /*ORANGE*/
+  width:80%;
+  margin:auto;
+  padding:2%;
 }
 input[type=text] {
    width: 400px;
    height: 50px;
-   padding-top: 10px;
-   padding-bottom: 10px;
-   padding-left: 10px;
-   padding-right: 10px;
-   border: 8px solid #E849B1
-
+   padding:10px;
+   border: 8px solid #FF5600; /*ORANGE*/
+   margin:10px;
 }
 .nameBox{
   width: 300px;
   height: 200px;
+}
 
 .nav-bar {
-  color: #AB4040;
-  margin: 50px;
-  padding-top: 30px;
-  border: 5px solid #488AC7;
-  border-radius: 7px;
+  font-family: 'Voltaire', sans-serif;
+  border: 5px solid #289976; /*TEAL*/
+  border-radius: 0 0 10% 10%;
   text-align: center;
+  width:80%;
+  margin:auto;
 }
+.nav-bar a {
+  display: inline-block;
+  width:30%;
+  padding:0;
+  margin:0;
+  text-decoration: none;
+  font-size:1.5em;
+  color: #67CC8E;     /*GREEN*/
+}
+
+a:hover{
+  color: #B1FF91;   /*PEPPERMINT*/
+}
+
+.dinosaur {
+  width: 50%;
+  height: 50%;
+}
+.time{
+   color: #67CC8E;     /*GREEN*/
+ }

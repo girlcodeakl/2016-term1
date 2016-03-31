@@ -4,34 +4,44 @@
   <meta charset='utf-8'>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <title>New Rawr</title>
+  <link href='https://fonts.googleapis.com/css?family=Voltaire' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header>
+    <img class="logo" src="Logo.png">
+  </header>
   <div class="outerBox">
-    <form method="post" action="/ideas">
+    <form method="post" action="/ideas" class="Rawr">
       <input type="text" name="idea" value="whats up in gondwanaland?" class="ideaInput">
       <br>
       <br>
-      <input type="text" name="Author" value="Whats your name?">
+      <input type="text" name="Author" value="Whats your name?" class="authorInput">
       <br>
       <br>
-      <input type="submit" value="Rawr.">
-      <a href="#" class="generateButton">LOVE</a>
+<input type="text" name="Picture URL" value="Add dinosaur picture" class="urlInput">
+      <br>
+      <br>
+    <input type="submit" value="Rawr.">
+    <a href="#" class="generateButton">LOVE</a>
     </form>
   </div>
   <div class="note">
   </div>
   <h1></h1>
   <h2></h2>
-  <div class="idea-box">
+  <div class="nav-bar">
     <a href="feed.html">Things about other people's life</a>
-    <a href="post.html">Post about your life</a>
+    <a href="post.html" class="current-page">Post about your life</a>
   </div>
   <script>
   var myCoolFunction = function (e) {
     e.preventDefault();
     var data = {};
     data.idea = $(".ideaInput").val();
+    data.author = $(".authorInput").val();
+    data.url = $(".urlInput").val();
+
     $.post( "/ideas" , data );
     $(".note").text("Thanks! Your rawr has been heard, my lizard friend.");
   }
