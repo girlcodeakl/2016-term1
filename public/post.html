@@ -35,10 +35,40 @@
     $.post( "/ideas" , data );
     $(".note").text("Thanks! Your rawr has been heard, my lizard friend.");
   }
+  var pickRandom = function(list){
+    return list [Math.floor(Math.random()*list.length)];
+  };
   var generateCompliment = function () {
-    var randomCompliment = "you are nice, dino!";
-    $(".ideaInput").val(randomCompliment);
-  }
+    var name = [];
+    name.push("spikey");
+    name.push("rex");
+    name.push("dino friend");
+    name.push("choyangosaurus");
+    name.push("zinrokh");
+    name.push("buckbeak");
+    name.push("fang");
+
+    var nice = [];
+    nice.push("nice");
+    nice.push("particularly appealing");
+    nice.push("adorable");
+    nice.push("dynamic");
+    nice.push("kind");
+    nice.push("exquisite");
+    nice.push("iridescent");
+    nice.push("quiddity");
+
+    var things = [];
+    things.push("smile");
+    things.push("tail");
+    things.push("roar");
+    things.push("hair");
+    things.push("personality");
+    things.push("disposition");
+
+    var myConcept = "Hi! You " + pickRandom(name) + " have a " + pickRandom(nice) + " " + pickRandom(things);
+    $(".ideaInput").val(myConcept);
+  };
   $(".Rawr").on("submit", myCoolFunction);
   $(".generateButton").on('click', generateCompliment);
   </script>
