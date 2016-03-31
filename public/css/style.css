@@ -1,9 +1,11 @@
 body {
-  color: black;
+  background-color: #FFE877; /*YELLOW*/
 }
 .idea-box {
-  background-color: #FFF0A5;
+  background-color: #B1FF91; /*PEPPERMINT*/
   padding: 20px;
+  width: 80%;
+  margin:auto;
 }
 h1 {
   text-align: center;;
@@ -14,24 +16,22 @@ h2 {
   color: #468966;
   margin: 10px;
   padding: 10px;
-  border: 2px solid #E849B1;
   border-radius: 5px;
   text-align: center;
 }
 .outerBox{
-  border: 10px solid #E849B1;
-  background-color: #F4BFFF;
-  padding: 50px;
+  border-radius: 10% 10% 0 0;
+  border: 5px solid #FF5600; /*ORANGE*/
+  width:80%;
+  margin:auto;
+  padding:2%;
 }
 input[type=text] {
    width: 400px;
    height: 50px;
-   padding-top: 10px;
-   padding-bottom: 10px;
-   padding-left: 10px;
-   padding-right: 10px;
-   border: 8px solid #E849B1
-
+   padding:10px;
+   border: 8px solid #FF5600; /*ORANGE*/
+   margin:10px;
 }
 .nameBox{
   width: 300px;
@@ -40,9 +40,11 @@ input[type=text] {
 
 .nav-bar {
   font-family: 'Voltaire', sans-serif;
-  border: 5px solid #289976; <!--TEAL-->
-  border-radius: 7px;
+  border: 5px solid #289976; /*TEAL*/
+  border-radius: 0 0 10% 10%;
   text-align: center;
+  width:80%;
+  margin:auto;
 }
 .nav-bar a {
   display: inline-block;
@@ -51,11 +53,11 @@ input[type=text] {
   margin:0;
   text-decoration: none;
   font-size:1.5em;
-  color: #67CC8E;     <!--GREEN-->
+  color: #67CC8E;     /*GREEN*/
 }
 
 a:hover{
-  color: #B1FF91;   <!--PEPPERMINT-->
+  color: #B1FF91;   /*PEPPERMINT*/
 }
 
 .dinosaur {
@@ -63,5 +65,5 @@ a:hover{
   height: 50%;
 }
 .time{
-   color: #FFE877;
+   color: #67CC8E;     /*GREEN*/
  }
