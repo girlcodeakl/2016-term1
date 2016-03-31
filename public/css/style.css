@@ -67,3 +67,13 @@ a:hover{
 .time{
    color: #67CC8E;     /*GREEN*/
  }
+
+ .container {
+   display: flex;
+ }
+.quickpic {
+  margin:20px;
+  display:block;
+  height:100px;
+  border: solid 3px #67CC8E;
+}

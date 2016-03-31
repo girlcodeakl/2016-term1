@@ -17,6 +17,16 @@
       <br>
       <br>
 <input type="text" name="Picture URL" value="Add dinosaur picture" class="urlInput">
+<br>
+<div class="container">
+<a href="#" class="quickpic1"><img class="quickpic" src="
+http://cute-dinosaur-clipart.clipartonline.net/_/rsrc/1358502686985/home/cartoon%20dinosaur%203.png?height=320&width=320g"></a>
+
+      <a href="#" class="quickpic2"><img class="quickpic" src="
+      http://ecx.images-amazon.com/images/I/41NY5qgVH5L._SY300_.jpg"></a>
+
+      <a href="#" class="quickpic3"><img class="quickpic" src="
+      https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbiuO4MNbYWPYOzot-gCZjysrgiG_98Lb5D7Wfv1V-AyB8Nd8Hhw"></a>
       <br>
       <br>
     <input type="submit" value="Rawr.">
@@ -31,6 +41,15 @@
     <a href="post.html" class="current-page">Post about your life</a>
   </div>
   <script>
+  var setPic1 = function() {
+    $(".urlInput").val("http://cute-dinosaur-clipart.clipartonline.net/_/rsrc/1358502686985/home/cartoon%20dinosaur%203.png?height=320&width=320g");
+}
+var setPic2 = function() {
+  $(".urlInput").val("http://ecx.images-amazon.com/images/I/41NY5qgVH5L._SY300_.jpg");
+}
+var setPic3 = function() {
+  $(".urlInput").val("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbiuO4MNbYWPYOzot-gCZjysrgiG_98Lb5D7Wfv1V-AyB8Nd8Hhw");
+}
   var myCoolFunction = function (e) {
     e.preventDefault();
     var data = {};
@@ -42,7 +61,10 @@
     $(".note").text("Thanks! Your rawr has been heard, my lizard friend.");
   }
 
-  $(".Rawr").on("submit", myCoolFunction);
+  $(".quickpic1").on("click", setPic1);
+    $(".quickpic2").on("click", setPic2);
+    $(".quickpic3").on("click", setPic3);
+      $(".Rawr").on("submit", myCoolFunction);
   </script>
 </body>
 </html>
