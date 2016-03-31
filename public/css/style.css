@@ -1,6 +1,15 @@
 body {
   background-color: #FFE877; /*YELLOW*/
 }
+header{
+  margin: auto;
+  width:80%;
+}
+.logo{
+  background-image: image(Logo.png);
+  display: block;
+  margin: auto;
+}
 .idea-box {
   background-color: #B1FF91; /*PEPPERMINT*/
   padding: 20px;
