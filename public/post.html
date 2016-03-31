@@ -16,6 +16,7 @@
       <br>
       <br>
       <input type="submit" value="Rawr.">
+      <a href="#" class="generateButton">LOVE</a>
     </form>
   </div>
   <div class="note">
@@ -34,8 +35,12 @@
     $.post( "/ideas" , data );
     $(".note").text("Thanks! Your rawr has been heard, my lizard friend.");
   }
-
+  var generateCompliment = function () {
+    var randomCompliment = "you are nice, dino!";
+    $(".ideaInput").val(randomCompliment);
+  }
   $(".Rawr").on("submit", myCoolFunction);
+  $(".generateButton").on('click', generateCompliment);
   </script>
 </body>
 </html>
