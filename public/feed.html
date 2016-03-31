@@ -25,14 +25,17 @@
 var displayIdea = function(idea) {
   var ideaElement = $('<h2>' + "<img class='dinosaur' src=" + idea.url +">" + "<br>" + idea.text + '<br>' + '<div class="time">' + $.format.prettyDate(idea.time) + '</div>' + '</h2>');
   $(".idea-box").append(ideaElement);
-
 }
 
 var createFeed = function(data) {
+  $(".idea-box").empty();
   data.forEach(displayIdea);
 }
 
-$.get("/ideas", createFeed);
+var updateFeed = function() {
+    $.get("/ideas", createFeed);
+}
+setInterval(updateFeed, 1000);
 
 
 //This is the end of the JavaScript.
