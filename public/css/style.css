@@ -76,6 +76,16 @@ a:hover{
 .time{
    color: #67CC8E;     /*GREEN*/
  }
+.postbuttons{
+  background-color: #FFE877;   /*YELLOW*/
+  color:#289976;   /*TEAL*/
+  border-color: #67CC8E;               /*GREEN*/
+  border-style: solid;
+  font-family: 'Voltaire', sans-serif;
+  width:20%;
+  font-size: 2em;
+}
+
 
  .container {
    display: flex;
