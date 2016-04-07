@@ -68,7 +68,8 @@ var setPic3 = function() {
   var pickRandom = function(list){
     return list [Math.floor(Math.random()*list.length)];
   };
-  var generateCompliment = function () {
+  var generateCompliment = function (e) {
+    e.preventDefault();
     var name = [];
     name.push("Spikey");
     name.push("Rex");
