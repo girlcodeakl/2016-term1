@@ -42,7 +42,7 @@ http://cute-dinosaur-clipart.clipartonline.net/_/rsrc/1358502686985/home/cartoon
   <h1></h1>
   <h2></h2>
   <div class="nav-bar">
-    <a href="feed.html">Things about other people's life</a>
+    <a href="index.html">Things about other people's life</a>
     <a href="post.html" class="current-page">Post about your life</a>
   </div>
   <script>
@@ -79,14 +79,14 @@ var setPic3 = function() {
     name.push("Fang");
 
     var nice = [];
-    nice.push("a nice");
-    nice.push("a particularly appealing");
-    nice.push("an adorable");
-    nice.push("a dynamic");
-    nice.push("a kind");
-    nice.push("an exquisite");
-    nice.push("an iridescent");
-    nice.push("a quiddity");
+    nice.push("nice");
+    nice.push("particularly appealing");
+    nice.push("adorable");
+    nice.push("dynamic");
+    nice.push("kind");
+    nice.push("exquisite");
+    nice.push("iridescent");
+    nice.push("quiddity");
 
     var things = [];
     things.push("smile");
@@ -96,7 +96,7 @@ var setPic3 = function() {
     things.push("personality");
     things.push("disposition");
 
-    var myConcept = "Hi " + pickRandom(name) + "! You have " + pickRandom(nice) + " " + pickRandom(things);
+    var myConcept = "Hi " + pickRandom(name) + "! You have a " + pickRandom(nice) + " " + pickRandom(things);
     $(".ideaInput").val(myConcept);
   };
   $(".Rawr").on("submit", myCoolFunction);
