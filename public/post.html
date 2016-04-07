@@ -79,14 +79,14 @@ var setPic3 = function() {
     name.push("Fang");
 
     var nice = [];
-    nice.push("nice");
-    nice.push("particularly appealing");
-    nice.push("adorable");
-    nice.push("dynamic");
-    nice.push("kind");
-    nice.push("exquisite");
-    nice.push("iridescent");
-    nice.push("quiddity");
+    nice.push("a nice");
+    nice.push("a particularly appealing");
+    nice.push("an adorable");
+    nice.push("a dynamic");
+    nice.push("a kind");
+    nice.push("an exquisite");
+    nice.push("an iridescent");
+    nice.push("a quiddity");
 
     var things = [];
     things.push("smile");
@@ -96,7 +96,7 @@ var setPic3 = function() {
     things.push("personality");
     things.push("disposition");
 
-    var myConcept = "Hi " + pickRandom(name) + "! You have a " + pickRandom(nice) + " " + pickRandom(things);
+    var myConcept = "Hi " + pickRandom(name) + "! You have " + pickRandom(nice) + " " + pickRandom(things);
     $(".ideaInput").val(myConcept);
   };
   $(".Rawr").on("submit", myCoolFunction);
