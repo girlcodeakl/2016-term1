@@ -50,13 +50,13 @@
   };
   var generateCompliment = function () {
     var name = [];
-    name.push("spikey");
-    name.push("rex");
-    name.push("dino friend");
-    name.push("choyangosaurus");
-    name.push("zinrokh");
-    name.push("buckbeak");
-    name.push("fang");
+    name.push("Spikey");
+    name.push("Rex");
+    name.push("Dino friend");
+    name.push("Choyangosaurus");
+    name.push("Zinrokh");
+    name.push("Buckbeak");
+    name.push("Fang");
 
     var nice = [];
     nice.push("nice");
@@ -76,7 +76,7 @@
     things.push("personality");
     things.push("disposition");
 
-    var myConcept = "Hi! You " + pickRandom(name) + " have a " + pickRandom(nice) + " " + pickRandom(things);
+    var myConcept = "Hi " + pickRandom(name) + "! You have a " + pickRandom(nice) + " " + pickRandom(things);
     $(".ideaInput").val(myConcept);
   };
   $(".Rawr").on("submit", myCoolFunction);
