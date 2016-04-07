@@ -34,7 +34,7 @@ var saveNewIdea = function (request, response) {
   idea.url = request.body.url;
   idea.time =  new Date();
   coolIdeas.push(idea); //save it in our list
-  response.send("Thanks for your shit idea. Please don't do it again");
+  response.send("Thanks for your idea. Please don't do it again");
   var dbPosts = database.collection('posts');
   dbPosts.insert(idea);
 }
