@@ -30,8 +30,8 @@ var displayIdea = function(idea) {
 
 var createFeed = function(data) {
   $(".idea-box").empty();
-  data.forEach(displayIdea);
   data.reverse();
+  data.forEach(displayIdea);
 }
 
 var updateFeed = function() {
