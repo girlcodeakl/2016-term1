@@ -24,7 +24,8 @@
 //Hello! This is the start of the JavaScript.
 
 var displayIdea = function(idea) {
-  var ideaElement = $('<h2>' + "<img class='dinosaur' src=" + idea.url +">" + "<br>" + idea.text + '<br>' + '<div class="time">' + $.format.prettyDate(idea.time) + '</div>' + '</h2>');
+  var ideaElement = $('<h2>' + "<img class='dinosaur' src=" + idea.url +">" + "<br>" + idea.text + '<br>' + '<div class="time">' + $.format.prettyDate(idea.time) + '</div>'
+  + '<div class = "author">'+ idea.author + '</div>' + '</h2>');
   $(".idea-box").append(ideaElement);
 }
 

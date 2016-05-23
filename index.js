@@ -33,6 +33,7 @@ var saveNewIdea = function (request, response) {
   idea.text = request.body.idea;
   idea.url = request.body.url;
   idea.time =  new Date();
+  idea.author = request.body.author;
   coolIdeas.push(idea); //save it in our list
   response.send("Thanks for your idea. Please don't do it again");
   var dbPosts = database.collection('posts');
