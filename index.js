@@ -31,7 +31,11 @@ var saveNewIdea = function (request, response) {
   console.log(request.body.author); //write it on the command prompt so we can see
   var idea = {};
   idea.text = request.body.idea;
-  idea.url = request.body.url;
+  if (request.body.url===""){
+    idea.url = "images/UploadImage.png";
+  } else {
+      idea.url = request.body.url;
+  }
   idea.time =  new Date();
   idea.author = request.body.author;
   coolIdeas.push(idea); //save it in our list
@@ -44,7 +48,7 @@ app.post('/ideas', saveNewIdea);
 //listen for connections on port 3000
 app.listen(process.env.PORT || 3000);
 console.log("I am listening...");
-
+console.log("added for no reason");
 var mongodb = require('mongodb');
 var uri = 'mongodb://user:password@ds015919.mlab.com:15919/girlcode16t1';
 mongodb.MongoClient.connect(uri, function(err, newdb) {
