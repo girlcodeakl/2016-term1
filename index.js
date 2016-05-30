@@ -37,6 +37,7 @@ var saveNewIdea = function (request, response) {
       idea.url = request.body.url;
   }
   idea.time =  new Date();
+  idea.author = request.body.author;
   coolIdeas.push(idea); //save it in our list
   response.send("Thanks for your idea. Please don't do it again");
   var dbPosts = database.collection('posts');
@@ -47,7 +48,7 @@ app.post('/ideas', saveNewIdea);
 //listen for connections on port 3000
 app.listen(process.env.PORT || 3000);
 console.log("I am listening...");
-
+console.log("added for no reason");
 var mongodb = require('mongodb');
 var uri = 'mongodb://user:password@ds015919.mlab.com:15919/girlcode16t1';
 mongodb.MongoClient.connect(uri, function(err, newdb) {
