@@ -21,6 +21,8 @@
 
     <script>
 //Hello! This is the start of the JavaScript.
+Notification.requestPermission();
+new Notification("Hello World!");
 
 var displayIdea = function(idea) {
   var ideaElement = $('<h2>' + "<img class='dinosaur' src=" + idea.url +">" + "<br>" + idea.text + '<br>' + '<div class="time">' + $.format.prettyDate(idea.time) + '</div>'
