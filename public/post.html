@@ -6,12 +6,15 @@
   <title>New Rawr</title>
   <link href='https://fonts.googleapis.com/css?family=Voltaire' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16.png">
 </head>
 <body>
+  <div class="mainNotificationShell">
+  <div class="mainNotification"> </div>
+  </div>
   <header>
-    <a href="index.html"><img class="logo" src="Logo.png"></a>
+    <img class="logo" src="Logo.png">
   </header>
   <div class="outerBox">
     <form method="post" action="/ideas" class="Rawr">
@@ -39,11 +42,14 @@ http://cute-dinosaur-clipart.clipartonline.net/_/rsrc/1358502686985/home/cartoon
       <button type="submit" class="postbuttons">RAWR</button>
     </form>
   </div>
-  <div class="note">
-  </div>
   <h1></h1>
   <h2></h2>
+  <div class="nav-bar">
+    <a href="index.html">Things about other people's life</a>
+    <a href="post.html" class="current-page">Post about your life</a>
+  </div>
   <script>
+  $('.mainNotificationShell').hide();
   var setPic1 = function() {
     $(".urlInput").val("http://cute-dinosaur-clipart.clipartonline.net/_/rsrc/1358502686985/home/cartoon%20dinosaur%203.png?height=320&width=320g");
 }
@@ -61,7 +67,9 @@ var setPic3 = function() {
     data.url = $(".urlInput").val();
 
     $.post( "/ideas" , data );
-    $(".note").text("Thanks! Your rawr has been heard, my lizard friend.");
+    $('.mainNotification').text("Your roar has been heard, my lizard friend");
+    $('.mainNotificationShell').show();
+    $('.mainNotificationShell').fadeOut(6000);
   }
   var pickRandom = function(list){
     return list [Math.floor(Math.random()*list.length)];
@@ -94,7 +102,6 @@ var setPic3 = function() {
     things.push("hair");
     things.push("personality");
     things.push("disposition");
-    things.push("look in your eye");
 
     var myConcept = "Hi " + pickRandom(name) + "! You have " + pickRandom(nice) + " " + pickRandom(things);
     $(".ideaInput").val(myConcept);
@@ -104,6 +111,7 @@ var setPic3 = function() {
   $(".quickpic1").on("click", setPic1);
     $(".quickpic2").on("click", setPic2);
     $(".quickpic3").on("click", setPic3);
+      $(".Rawr").on("submit", myCoolFunction);
   </script>
 </body>
 </html>
