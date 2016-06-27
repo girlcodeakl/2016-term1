@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16.png">
 </head>
 <body>
-  <div class="mainNotificationShell">
+  <div class="mainNotificationShell"> <!-- BANNER -->
   <div class="mainNotification"> </div>
   </div>
   <header>
@@ -18,7 +18,7 @@
   </header>
   <div class="outerBox">
     <form method="post" action="/ideas" class="Rawr">
-      <input type="text" name="idea" placeholder="whats up in gondwanaland?" class="ideaInput">
+      <input type="text" name="idea" placeholder="Whats up in gondwanaland?" class="ideaInput">
       <br>
       <br>
       <input type="text" name="Author" placeholder="Whats your name?" class="authorInput">
@@ -27,8 +27,8 @@
 <input type="text" name="Picture URL" placeholder="Add dinosaur picture" class="urlInput">
 <br>
 <div class="container">
-<a href="#" class="quickpic1"><img class="quickpic" src="
-http://cute-dinosaur-clipart.clipartonline.net/_/rsrc/1358502686985/home/cartoon%20dinosaur%203.png?height=320&width=320g"></a>
+      <a href="#" class="quickpic1"><img class="quickpic" src="
+      http://cute-dinosaur-clipart.clipartonline.net/_/rsrc/1358502686985/home/cartoon%20dinosaur%203.png?height=320&width=320g"></a>
 
       <a href="#" class="quickpic2"><img class="quickpic" src="
       http://ecx.images-amazon.com/images/I/41NY5qgVH5L._SY300_.jpg"></a>
@@ -109,9 +109,9 @@ var setPic3 = function() {
   $(".Rawr").on("submit", myCoolFunction);
   $(".generateButton").on('click', generateCompliment);
   $(".quickpic1").on("click", setPic1);
-    $(".quickpic2").on("click", setPic2);
-    $(".quickpic3").on("click", setPic3);
-      $(".Rawr").on("submit", myCoolFunction);
+  $(".quickpic2").on("click", setPic2);
+  $(".quickpic3").on("click", setPic3);
+  $(".Rawr").on("submit", myCoolFunction);
   </script>
 </body>
 </html>
