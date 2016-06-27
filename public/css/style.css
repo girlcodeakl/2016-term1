@@ -44,6 +44,17 @@ h2 {
   padding:2%;
   background-color: #bdf7b7; /*DINO BELLY GREEN*/
 }
+
+.outerBoxGuts{
+  display: flex;
+  justify-content: center;
+}
+
+.outerBoxIntestines{
+  display: flex;
+  justify-content:space-between;
+}
+
 input[type=text] {
    width: 400px;
    height: 50px;
@@ -130,6 +141,5 @@ a:hover{
    font-size: 100px;
    border-color: #de7070; /*DUSTY PINK*/
    border-style: solid;
-   font-family: 'Voltaire', sans-serif;
    border-radius: 10% 10% 10% 10%;
 }
