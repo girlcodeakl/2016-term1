@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="mainNotificationShell"> <!-- BANNER -->
-  <div class="mainNotification"> </div>
+    <div class="mainNotification"> </div>
   </div>
   <header>
     <img class="logo" src="Logo.png">
@@ -22,31 +22,23 @@
   </div>
   <div class="outerBox">
     <div class="outerBoxGuts">
-    <form method="post" action="/ideas" class="Rawr">
-      <input type="text" name="idea" placeholder="Whats up in gondwanaland?" class="ideaInput">
-      <br>
-      <br>
-      <input type="text" name="Author" placeholder="Whats your name?" class="authorInput">
-      <br>
-      <br>
-<input type="text" name="Picture URL" placeholder="Add dinosaur picture" class="urlInput">
-<br>
-<div class="container">
-      <a href="#" class="quickpic1"><img class="quickpic" src="
-      http://cute-dinosaur-clipart.clipartonline.net/_/rsrc/1358502686985/home/cartoon%20dinosaur%203.png?height=320&width=320g"></a>
-
-      <a href="#" class="quickpic2"><img class="quickpic" src="
-      http://ecx.images-amazon.com/images/I/41NY5qgVH5L._SY300_.jpg"></a>
-
-      <a href="#" class="quickpic3"><img class="quickpic" src="
-      https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbiuO4MNbYWPYOzot-gCZjysrgiG_98Lb5D7Wfv1V-AyB8Nd8Hhw"></a>
-    </div>
-    <br>
-      <br>
-      <div class = "outerBoxIntestines">
-      <button class="generateButton postbuttons">&#10084;</button>
-      <button type="submit" class="postbuttons">RAWR</button>
-    </div>
+      <form method="post" action="/ideas" class="Rawr">
+        <input type="text" name="idea" placeholder="Whats up in gondwanaland?" class="ideaInput">
+        <br>
+        <br>
+        <input type="text" name="Author" placeholder="Whats your name?" class="authorInput">
+        <br>
+        <br>
+        <input type="text" name="Picture URL" placeholder="Add dinosaur picture" class="urlInput">
+        <br>
+        <div class="container">
+        </div>
+        <br>
+        <br>
+        <div class = "outerBoxIntestines">
+          <button class="generateButton postbuttons">&#10084;</button>
+          <button type="submit" class="postbuttons">RAWR</button>
+        </div>
       </form>
     </div>
   </div>
@@ -55,15 +47,45 @@
 
   <script>
   $('.mainNotificationShell').hide();
-  var setPic1 = function() {
-    $(".urlInput").val("http://cute-dinosaur-clipart.clipartonline.net/_/rsrc/1358502686985/home/cartoon%20dinosaur%203.png?height=320&width=320g");
-}
-var setPic2 = function() {
-  $(".urlInput").val("http://ecx.images-amazon.com/images/I/41NY5qgVH5L._SY300_.jpg");
-}
-var setPic3 = function() {
-  $(".urlInput").val("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbiuO4MNbYWPYOzot-gCZjysrgiG_98Lb5D7Wfv1V-AyB8Nd8Hhw");
-}
+
+//picture links for our quickpics post feature
+  var pics = [];
+  pics.push("http://cute-dinosaur-clipart.clipartonline.net/_/rsrc/1358502686985/home/cartoon%20dinosaur%203.png?height=320&width=320g");
+  pics.push("http://ecx.images-amazon.com/images/I/41NY5qgVH5L._SY300_.jpg");
+  pics.push("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbiuO4MNbYWPYOzot-gCZjysrgiG_98Lb5D7Wfv1V-AyB8Nd8Hhw");
+  pics.push("/images/animateddinofly.gif");
+  pics.push("/images/animateddinoride.gif");
+  pics.push("/images/animateddinorun.gif");
+  pics.push("/images/animateddinostego.gif");
+  pics.push("/images/animateddinotri.gif");
+  pics.push("/images/chubbydino.gif");
+  pics.push("/images/chubbydinoheart.gif");
+  pics.push("/images/logodino.jpg");
+  pics.push("/images/originaldinoframed.png");
+  pics.push("/images/pixeldino.png");
+  pics.push("/images/pixeldinoheart.png");
+  pics.push("/images/roundeddino.jpg");
+  pics.push("/images/tealdinoframed.png");
+  pics.push("/images/tealheartdinoframed.png");
+
+//set the url when you click on a quickpic
+  var setPic = function(e) {
+    $(".urlInput").val(e.data);
+  }
+
+//generate a quickpic button autmagically from the image link
+  var makePicButton = function(picsLink) {
+    var picButton = $('<a href="#" class="quickpic1"><img class="quickpic" src="' + picsLink + '"></a>')
+    $(".container").append(picButton)
+    picButton.on("click", null, picsLink, setPic);
+  }
+
+//loop through all the links to make buttons for each of them
+  for (var i = 0; i < pics.length; i++) {
+    makePicButton(pics[i]);
+  }
+
+
   var myCoolFunction = function (e) {
     e.preventDefault();
     var data = {};
@@ -113,10 +135,8 @@ var setPic3 = function() {
   };
   $(".Rawr").on("submit", myCoolFunction);
   $(".generateButton").on('click', generateCompliment);
-  $(".quickpic1").on("click", setPic1);
-  $(".quickpic2").on("click", setPic2);
-  $(".quickpic3").on("click", setPic3);
   $(".Rawr").on("submit", myCoolFunction);
+
   </script>
 </body>
 </html>
