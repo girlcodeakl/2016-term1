@@ -102,6 +102,7 @@ a:hover{
    color: #de7070;
    font-family: 'Voltaire', sans-serif;     /*DUSTY ROSE*/
  }
+
 .postbuttons {
   background-color: #51d197;   /*DINO BODY GREEN*/
   color:#de7070;   /*DUSTY ROSE*/
@@ -122,6 +123,21 @@ a:hover{
   height:100px;
   border: solid 3px #de7070; /*DUSTY ROSE*/
   border-radius: 10% 10% 10% 10%;
+}
+
+.commentInput{
+  border-radius: 10% 10% 10% 10%;
+}
+
+.commentButton{
+  background-color: #51d197;   /*DINO BODY GREEN*/
+  color:#de7070;   /*DUSTY ROSE*/
+  border-color: #de7070;               /*DUSTY ROSE*/
+  border-style: solid;
+  font-family: 'Voltaire', sans-serif;
+  font-size: 20px;
+  width:20%;
+  hover: #ffe14f;
 }
 
 .mainNotificationShell  {

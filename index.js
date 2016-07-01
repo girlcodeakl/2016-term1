@@ -45,6 +45,11 @@ var saveNewIdea = function (request, response) {
 }
 app.post('/ideas', saveNewIdea);
 
+var saveNewComment = function (request, response) {
+  console.log(request.body.comment);
+}
+app.post('/comments', saveNewComment);
+
 //listen for connections on port 3000
 app.listen(process.env.PORT || 3000);
 console.log("I am listening...");

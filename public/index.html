@@ -27,9 +27,20 @@ Notification.requestPermission();
 new Notification("Hello World!");
 
 var displayIdea = function(idea) {
-  var ideaElement = $('<h2>' + "<img class='dinosaur' src=" + idea.url +">" + "<br>" + idea.text + '<br>' + '<div class="time">' + $.format.prettyDate(idea.time) + '</div>'
-  + '<div class = "author">'+ idea.author + '</div>' + '</h2>');
-  $(".idea-box").append(ideaElement);
+  var ideaElement = $('<h2>' + "<img class='dinosaur' src=" + idea.url +">"
+   + "<br>" + idea.text + '<br>' + '<div class="time">'
+   + $.format.prettyDate(idea.time) + '</div>'
+   + '<div class = "author">'+ idea.author + '</div>'
+   + "<input type=\"text\" name=\"Comment\" placeholder=\"Leave a comment!\" class=\"commentInput\">"
+   + "<button type=\"submit\" class=\"commentButton\">Post</button>" + '</h2>');
+   ideaElement.delegate(".commentButton", "click", function (){
+     var data = {
+     }
+     data.comment = ideaElement.find(".commentInput").val();
+                    alert(data);
+                    $.post( "/comments", data);
+   })
+   $(".idea-box").append(ideaElement);
 }
 
 var createFeed = function(data) {
@@ -41,7 +52,10 @@ var createFeed = function(data) {
 var updateFeed = function() {
     $.get("/ideas", createFeed);
 }
-setInterval(updateFeed, 1000);
+
+updateFeed();
+
+//setInterval(updateFeed, 1000);
 
 
 //This is the end of the JavaScript.
