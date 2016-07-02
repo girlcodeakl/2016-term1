@@ -113,6 +113,10 @@ a:hover{
   font-size: 2em;
 }
 
+.postbuttons:hover{
+  color: #ffe14f;
+}
+
  .container {
    display: flex;
  }
@@ -125,19 +129,19 @@ a:hover{
   border-radius: 10% 10% 10% 10%;
 }
 
-.commentInput{
-  border-radius: 10% 10% 10% 10%;
-}
-
 .commentButton{
   background-color: #51d197;   /*DINO BODY GREEN*/
   color:#de7070;   /*DUSTY ROSE*/
   border-color: #de7070;               /*DUSTY ROSE*/
   border-style: solid;
   font-family: 'Voltaire', sans-serif;
-  font-size: 20px;
-  width:20%;
-  hover: #ffe14f;
+  font-size: 30px;
+  /*width:20%;*/
+  border-radius: 10% 10% 10% 10%;
+}
+
+.commentButton:hover{
+  color: #ffe14f;
 }
 
 .mainNotificationShell  {
@@ -159,4 +163,8 @@ a:hover{
    border-color: #de7070; /*DUSTY PINK*/
    border-style: solid;
    border-radius: 10% 10% 10% 10%;
+}
+
+.postId {
+    display: none;
 }

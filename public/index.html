@@ -32,7 +32,9 @@ var displayIdea = function(idea) {
    + $.format.prettyDate(idea.time) + '</div>'
    + '<div class = "author">'+ idea.author + '</div>'
    + "<input type=\"text\" name=\"Comment\" placeholder=\"Leave a comment!\" class=\"commentInput\">"
-   + "<button type=\"submit\" class=\"commentButton\">Post</button>" + '</h2>');
+   + "<button type=\"submit\" class=\"commentButton\">Post</button>"
+   + '<div class=\"postId\">' + idea.id + "</div>"
+   + '</h2>');
    ideaElement.delegate(".commentButton", "click", function (){
      var data = {
      }
