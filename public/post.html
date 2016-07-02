@@ -47,7 +47,6 @@
 
   <script>
   $('.mainNotificationShell').hide();
-
 //picture links for our quickpics post feature
   var pics = [];
   pics.push("http://cute-dinosaur-clipart.clipartonline.net/_/rsrc/1358502686985/home/cartoon%20dinosaur%203.png?height=320&width=320g");
@@ -71,6 +70,7 @@
 //set the url when you click on a quickpic
   var setPic = function(e) {
     $(".urlInput").val(e.data);
+    e.preventDefault();
   }
 
 //generate a quickpic button autmagically from the image link
@@ -84,7 +84,6 @@
   for (var i = 0; i < pics.length; i++) {
     makePicButton(pics[i]);
   }
-
 
   var myCoolFunction = function (e) {
     e.preventDefault();
@@ -135,8 +134,6 @@
   };
   $(".Rawr").on("submit", myCoolFunction);
   $(".generateButton").on('click', generateCompliment);
-  $(".Rawr").on("submit", myCoolFunction);
-
   </script>
 </body>
 </html>
