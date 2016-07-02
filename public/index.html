@@ -39,8 +39,9 @@ var displayIdea = function(idea) {
      var data = {
      }
      data.comment = ideaElement.find(".commentInput").val();
-                    alert(data);
-                    $.post( "/comments", data);
+     data.postId = idea.id;
+                   alert(data.postId + data.comment);
+                   $.post( "/comments", data);
    })
    $(".idea-box").append(ideaElement);
 }

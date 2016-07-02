@@ -25,6 +25,12 @@ var sendIdeasList = function (request, response) {
 }
 app.get('/ideas', sendIdeasList);
 
+//let a client GET comments
+var sendComments = function (request, response) {
+  response.send(coolComments);
+}
+app.get('/comments', sendComments);
+
 //let a client POST new ideas
 var saveNewIdea = function (request, response) {
   console.log(request.body.idea);
@@ -59,6 +65,9 @@ app.get('/idea', function (req, res) {
 
 var saveNewComment = function (request, response) {
   console.log(request.body.comment);
+var newComment = {}
+  newComment.id = request.body.id;
+  newComment.comment = request.body.comment;
 }
 app.post('/comments', saveNewComment);
 
